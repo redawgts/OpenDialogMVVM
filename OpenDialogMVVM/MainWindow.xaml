@@ -1,0 +1,30 @@
+﻿<Window
+    x:Class="OpenDialogMVVM.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:OpenDialogMVVM"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="OpenDialogMVVM"
+    Width="525"
+    Height="400"
+    d:DataContext="{d:DesignInstance Type=local:MainViewModel}"
+    Background="WhiteSmoke"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button
+                Margin="0,10"
+                Padding="10"
+                Command="{Binding OpenDialogCommand}"
+                Content="Open Dialog" />
+            <Button
+                Padding="10"
+                Command="{Binding OpenDialogWithDICommand}"
+                Content="Open Dialog With DI" />
+        </StackPanel>
+    </Grid>
+
+</Window>
